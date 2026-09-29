@@ -1,0 +1,1 @@
+Customer|1001|Ali|862ef3927a7c8acfd3e79aa547800ef285cd9b13a39f5ec2d47554981cb313c8|212345|-290.0:2:false:Titanium|NONE

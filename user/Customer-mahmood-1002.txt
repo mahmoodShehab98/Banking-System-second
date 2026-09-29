@@ -1,0 +1,1 @@
+Customer|1002|mahmood|3e80feeab25af50477ec0c6f9a9fbfe254814faf6ab5ebf1f926d268013ecfdb|33333|NONE|100.0:0:true:Platinum
