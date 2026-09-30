@@ -232,7 +232,7 @@ public class Main {
                 System.out.print("Enter amount to withdraw: ");
                 double amount = Double.parseDouble(scanner.nextLine());
 
-                boolean wasNegative = account.getBalance() < 0;
+                boolean wasNegative = account.getBalance() <= 0;
 
                 if (wasNegative && amount > 100) {
                     System.out.println("Cannot withdraw more than $100 while account balance is negative.");
