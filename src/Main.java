@@ -240,7 +240,7 @@ public class Main {
                 }
 
                 double todayWithdrawals = transactionLogger.getTodayTotal(customer.getId(), "Withdraw");
-                double withdrawLimit = TransactionLogger.getLimit(account.getCardType(), "Withdraw");
+                double withdrawLimit = transactionLogger.getLimit(account.getCardType(), "Withdraw");
                 if (todayWithdrawals + amount > withdrawLimit) {
                     System.out.println("Daily withdraw limit exceeded for " + account.getCardType() + " card ($" + withdrawLimit + "). Already withdrawn today: $" + todayWithdrawals);
                     continue;
@@ -302,7 +302,7 @@ public class Main {
                         double amount = Double.parseDouble(scanner.nextLine());
 
                         double todayOwnTransfers = transactionLogger.getTodayTotal(customer.getId(), "Transfer-Own-Out");
-                        double ownTransferLimit = TransactionLogger.getLimit(from.getCardType(), "Transfer-Own");
+                        double ownTransferLimit = transactionLogger.getLimit(from.getCardType(), "Transfer-Own");
                         if (todayOwnTransfers + amount > ownTransferLimit) {
                             System.out.println("Daily own-account transfer limit exceeded for " + from.getCardType() + " card ($" + ownTransferLimit + ").");
                             continue;
@@ -353,7 +353,7 @@ public class Main {
                         double amount = Double.parseDouble(scanner.nextLine());
 
                         double todayTransfers = transactionLogger.getTodayTotal(customer.getId(), "Transfer-Out");
-                        double transferLimit = TransactionLogger.getLimit(from.getCardType(), "Transfer");
+                        double transferLimit = transactionLogger.getLimit(from.getCardType(), "Transfer");
                         if (todayTransfers + amount > transferLimit) {
                             System.out.println("Daily transfer limit exceeded for " + from.getCardType() + " card ($" + transferLimit + ").");
                             continue;

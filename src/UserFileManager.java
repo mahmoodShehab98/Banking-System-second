@@ -86,7 +86,8 @@ public class UserFileManager {
 
         String[] accParts = data.split(":");
 
-        // 5000.0 0 true Mastercard
+        // ["5000.0", "0", "true", "Mastercard"]
+        //["5000", ]
 
 
         double balance = Double.parseDouble(accParts[0]);

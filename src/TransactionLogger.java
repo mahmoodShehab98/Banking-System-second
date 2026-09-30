@@ -86,7 +86,7 @@ public class TransactionLogger {
         reader.close();
         return total;
     }
-    public static double getLimit (String cardType ,String operation){
+    public double getLimit (String cardType ,String operation){
         if (cardType.equals("Platinum")){
             if (operation.equals("Withdraw")) return 20000;
             if (operation.equals("Transfer")) return 40000;
